@@ -1,0 +1,95 @@
+React: Parent Library
+    Commands:
+        1. create app: npx create-react-app {{app name in lowercase only}}
+        2. faster way to create app: use vite or parsel
+            2.1. npm create vite@latest
+    
+
+React-DOM: to work on the web
+
+React-native: to work on the mobile
+
+
+Create your own react library and jsx?
+Steps:
+    Note: Creating in the folder: "CustomReact"
+    1. create index.HTML
+        1.1 create div with id "root" so that script can inject the jsx module.
+        1.2 create a script tag with src as the jsx component {{name -> index.js}}.
+    2. create index.js
+        2.1 get the div in which we going to inject the object, code as follow:
+            const mainContainer = document.querySelector('#root');
+        2.2 create React element as shown in customReact folder:
+            e.g. 
+                const reactElement = {
+                    type: 'a',
+                    props: {
+                        href: 'https://google.com',
+                        target: '_blank'
+                    },
+                    Children: 'Click on me to Visit google'
+                }
+        2.3 create render method to inject the object in the html div, with id as "root"
+            e.g. 
+                function customRender(reactElement, container){
+                    /*
+                    const domElement = document.createElement(reactElement.type)
+                    domElement.innerHTML = reactElement.Children;
+                    domElement.setAttribute('href', reactElement.props.href)
+                    domElement.setAttribute('target', reactElement.props.target)
+                    
+                    container.appendChild(domElement)
+                    */
+                
+                    // make modular
+                    const domElement = document.createElement(reactElement.type);
+                    domElement.innerHTML = reactElement.Children;
+                    for(const prop in reactElement.props){
+                        if(prop === 'Children') continue;
+                        domElement.setAttribute(prop, reactElement.props[prop]);
+                    }
+                    container.appendChild(domElement);
+                }
+                
+                // calling method
+                customRender(reactElement, mainContainer)
+    3. now object will be shown in the html page:
+        e.g. of whole code structure:
+            function customRender(reactElement, container){
+                /*
+                const domElement = document.createElement(reactElement.type)
+                domElement.innerHTML = reactElement.Children;
+                domElement.setAttribute('href', reactElement.props.href)
+                domElement.setAttribute('target', reactElement.props.target)
+
+                container.appendChild(domElement)
+                */
+
+                // make modular
+                const domElement = document.createElement(reactElement.type);
+                domElement.innerHTML = reactElement.Children;
+                for(const prop in reactElement.props){
+                    if(prop === 'Children') continue;
+                    domElement.setAttribute(prop, reactElement.props[prop]);
+                }
+                container.appendChild(domElement);
+            }
+
+            const reactElement = {
+                type: 'a',
+                props: {
+                    href: 'https://google.com',
+                    target: '_blank'
+                },
+                Children: 'Click on me to Visit google'
+            }
+
+            const mainContainer = document.querySelector('#root');
+
+            customRender(reactElement, mainContainer)
+
+
+Rules:
+1. put the components name as jsx
+2. put the components name as capitalize
+
