@@ -22,3 +22,12 @@ Ans. It is found in used for rendering images in the mobile application, meta ta
 
 Q8. who are responsible for injecting index.js in the HTML page?
 Ans. scripts of package.json
+
+Q9. how to create react element? and what are the attributes of it?
+Ans. use React.createElement(
+    {{tag}} type ,
+    {{required elements like href, target, etc}} props: {
+        . . . 
+    }
+    '{{text to display in the element}}'
+)
