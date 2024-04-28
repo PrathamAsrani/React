@@ -23,13 +23,15 @@ const AnotherElement = (
   <a href="https://google.com" target='_blank'> Visit google</a>
 )
 
+const Variable = "click me to go to goole.com";
+
 const ReactElement = React.createElement(
   'a',
   {
     href: 'https://google.com',
     target: '_blank',
   },
-  'click me to go to goole.com'
+  Variable
 )
 
 
@@ -39,17 +41,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 */
 
-
+/*
 ReactDOM.createRoot(document.getElementById('root')).render(
   ReactElement
   // AnotherElement
 )
+*/
 
-/*
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
     <MyApp />
   </React.StrictMode>,
 )
-*/

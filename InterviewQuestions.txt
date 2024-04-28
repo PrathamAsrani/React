@@ -31,3 +31,7 @@ Ans. use React.createElement(
     }
     '{{text to display in the element}}'
 )
+
+Q10. What is UseState Hook?
+Ans. The UseState hook gives a variable and method to update that variable in UI component. A single variable can be used in multiple places in a single page, so that's why to update it's value we use USESTATE hook.
+e.g. please refer hook_counter folder.
