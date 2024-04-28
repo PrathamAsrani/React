@@ -1,9 +1,12 @@
 import Header from "./Header";
 
 function App() {
-
+  const username = "Chai aur code";
   return (
-    <Header />
+    <>
+      <Header />
+      {username}
+    </>
   )
 }
 

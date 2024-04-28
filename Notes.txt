@@ -6,6 +6,7 @@ React: Parent Library
     
 
 React-DOM: to work on the web
+1. Change the UI, whenever variable updated using hooks
 
 React-native: to work on the mobile
 
