@@ -35,3 +35,9 @@ Ans. use React.createElement(
 Q10. What is UseState Hook?
 Ans. The UseState hook gives a variable and method to update that variable in UI component. A single variable can be used in multiple places in a single page, so that's why to update it's value we use USESTATE hook.
 e.g. please refer hook_counter folder.
+
+Q11. Virtual DOM?
+Ans. Do all the changes at a single go, don't do "one - by - one", provide abitity of pause, abort, or reuse work as new updates come in, the abitity to assign priority to different types of updates.
+
+Q12. Reconciliation in React?
+Ans. Recursive algorithm in react reconsider the component to update or not, differentiates one tree with another (REACT TREE AND SOM TREE) to determine which part need to be changed (VIRTUAL DOM).
