@@ -5,9 +5,17 @@ React: Parent Library
             2.1. npm create vite@latest
     
 
+***********************************************************************
 React-DOM: to work on the web
 1. Change the UI, whenever variable updated using hooks
 
+2. Virtual DOM?
+Ans. Do all the changes at a single go, don't do "one - by - one", provide abitity of pause, abort, or reuse work as new updates come in, the abitity to assign priority to different types of updates.
+
+3. Reconciliation in React?
+Ans. Recursive algorithm in react reconsider the component to update or not, differentiates one tree with another (REACT TREE AND SOM TREE) to determine which part need to be changed (VIRTUAL DOM).
+
+***********************************************************************
 React-native: to work on the mobile
 
 
